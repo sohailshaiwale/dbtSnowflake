@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: ZEEL
+    columns:
+      - name: location
+        tests:
+          - unique
+          - not_null
+          - is_bangalore
+
+sources:
+  - name: SNOWFLAKE
+    database: SAMPLEDB
+    schema: PUBLIC
+    tables:
+      - name: TWEETS
+  
